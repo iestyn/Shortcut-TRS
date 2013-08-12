@@ -11,17 +11,11 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/jquery-ui/jquery-ui-1.10.1.custom.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/jquery-ui/jquery-ui-1.10.1.custom.min.css"
-
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.js"></script>
+            
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         
     </head>
     <body>
@@ -70,14 +64,14 @@
                 
                     <div class="span4">
                         
-                        <p><button type="submit" class="btn btn-primary btn-large">Update today's timesheet &raquo;</button></p>
+                        <p><button type="submit" class="btn btn-primary btn-large timesheet-today">Update today's timesheet &raquo;</button></p>
                         
                     </div>
                     
                     <div class="span3">
                         
                         <p>Timesheet for: <span class="display-user text-info">xxx</span>    </p>
-                        <p>Today's date: <span class="display-date text-info">xxx</span></p>
+                        <p>Today's date: <input name="current_dt" class="current_dt" value="25-NOV-2012" id="timesheetday"></p> 
                         
                     </div>
                     
@@ -93,7 +87,7 @@
                     <div class="accordion" id="accordion2">
                         <div class="accordion-group">
                             <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">More options - Want to enter different hours today, or change the date?</a>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">More options - Want to enter different hours today, or timesheet hours code?</a>
                             </div>
                             <div id="collapseOne" class="accordion-body collapse">
                                 <div class="accordion-inner">                    
@@ -296,16 +290,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-ui-1.10.1.custom.min.js"><\/script>')</script>
         
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
-
         <script src="js/shortcut-trs.js"></script>
-        
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+
     </body>
 </html>
