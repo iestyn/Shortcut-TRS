@@ -5,17 +5,52 @@
    ========================================================================== */
 
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+h2, h3 {
+    font-size: 1.3em;
 }
 
 input, textarea, .uneditable-input {
     width: auto;
 }
 
+.timesheet-today {
+
+}
+
+.timesheet-day {
+    margin-top: 20px;
+}
+
+.hero-unit {
+    padding: 5px;        
+}
 
 
-
+@media print,screen and (min-width: 768px) {
+    
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+}    
+    
+.hero-unit {
+    padding: 40px;        
+}
+    
+}
 
 
 
