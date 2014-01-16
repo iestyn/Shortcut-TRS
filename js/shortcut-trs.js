@@ -8,6 +8,7 @@ $(document).ready(function() {
         }
     });
 
+    updateTodaysTimesheetDates();
     updateTimesheetDates();
     
     /*$('#ex').click(function(event){
@@ -31,13 +32,17 @@ var epochData = {
      ** day of fortnight = 1
      ** fortnight number = 2005
      **
+     ** On Monday 13/1/2014, the following values were true:
+     ** day of fortnight = 1
+     ** fortnight number = 2365
+     ** 
      ** Update these two values with the date of day one of the fortnight
      ** and the fortnight number for that day.
      **
      **/
     
-    refDayOneOfFortnight: 'January 28, 2013', 
-    refFortnightNumber: 2005,    
+    refDayOneOfFortnight: 'January 13, 2014', 
+    refFortnightNumber: 2365,    
     monthNames: [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ],
      
     fn: function(dateStr) {
@@ -88,10 +93,37 @@ var epochData = {
     }
 };
 
-function updateTimesheetDates(dateText, dateObject) {
+function updateTodaysTimesheetDates(dateText, dateObject) {
     
-   $('.current_dt').val(function() {
+    $('.current_dt_today').val(function() {
+        return getTodaysDate(dateText);
+    });
+    
+    $('.fn_today').val(function() {
+        return getTodaysFortnight(dateText);    
+    });
+    
+    $('.dof_today').val(function() {
+        return getTodaysDayOfFortnight(dateText);    
+    });
+
+    $('.display-date-today').html(function () {
         return getTodaysDate(dateText);    
+    });
+    
+    $('.display-fn-today').html(function () {
+        return getTodaysFortnight(dateText);    
+    });
+
+    $('.display-dof-today').html(function () {
+        return getTodaysDayOfFortnight(dateText);    
+    });
+}
+
+function updateTimesheetDates(dateText, dateObject) {
+
+   $('.current_dt').val(function() {
+        return getTodaysDate(dateText);
     });
     
     $('.fn').val(function() {
