@@ -36,13 +36,17 @@ var epochData = {
      ** day of fortnight = 1
      ** fortnight number = 2365
      ** 
+     ** On Monday 11/1/2016, the following values were true:
+     ** day of fortnight = 1
+     ** fortnight number = 2735
+     ** 
      ** Update these two values with the date of day one of the fortnight
      ** and the fortnight number for that day.
      **
      **/
-    
-    refDayOneOfFortnight: 'January 13, 2014', 
-    refFortnightNumber: 2365,    
+
+    refDayOneOfFortnight: 'January 11, 2016',
+    refFortnightNumber: 2735,  
     monthNames: [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ],
      
     fn: function(dateStr) {
